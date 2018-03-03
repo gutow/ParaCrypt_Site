@@ -1,0 +1,19 @@
+<!DocType HTML5>
+<head>
+<style type="text/css">
+.content{
+    position:relative;
+    text-align:left;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:8px;
+    margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+<!--#include virtual="header.html"-->
+<!--Put content below here. Special Styling should be added in the header-->
+<!--#include virtual="footer.html"-->
+</body>
+</html>
