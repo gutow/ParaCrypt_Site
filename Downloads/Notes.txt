@@ -1,0 +1,2 @@
+The files here can be downloaded and uncompressed to install a working version
+of the software.
