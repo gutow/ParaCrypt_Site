@@ -1,0 +1,54 @@
+<!DocType HTML5>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style type="text/css">
+.content{
+    position:relative;
+    text-align:left;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:8px;
+    margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <p>ParaCrypt is software for encrypting and decrypting data.
+      For convenience the one-time-encryption-pads are created using preshared 
+      unencrypted files as sources of entropy.</p>
+    <p>This software originally started as a project to better
+      understand the weaknesses in the cryptography that privacy on the internet
+      depends upon. Reading a little literature, poking through the cryptography
+      standards documents and some cryptographic code convinced me that although
+      most of the standard methods are reasonably secure at the moment, they are
+      all vulnerable to increases in computing power and smart cryptanalysts. The
+      only provably uncrackable encryption is a 
+      <a href="https://en.wikipedia.org/wiki/One-time_pad">
+      one-time-pad (see Wikipedia)</a>. One-time-pads are inconvenient to use
+      because they require presharing a well randomized agreed upon key that is 
+      longer than what is to be encrypted. 
+    </p>
+    <p>Paranoid Encrypt is my attempt to make this as convenient
+       as possible. You still must preshare key files with your correspondent, but
+       the files themselves do not have to be completely random. Your key files can
+       be photos, large documents with a mixture of text and images or any other
+       computer file you have handy (see the section on picking key files, 
+       it is possible to choose bad key files). To make this work you must also 
+       share with your
+       correspondent a password (even better, time varying passwords). The key file
+       and the password are combined to make a one-time-pad with good randomness.
+       As long as the password + key file combination is not reused or compromised
+       the encrypted data should be undecipherable. That said, a good cryptanalyst
+       with some idea of what is in your message may be able to extract some of it.
+    </p>
+</div>
+
+<p>The code repository is under construction, but may be accessed 
+<a href="https://sourceforge.net/projects/paracrypt/">here</a>.</p>
+
+<div class="content"> This site is currently under construction please check back.</div>
+
+</body>
+</html>

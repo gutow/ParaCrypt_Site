@@ -1,5 +1,7 @@
 <!DocType HTML5>
+<html>
 <head>
+<meta charset="utf-8"/>
 <style type="text/css">
 .content{
     position:relative;
@@ -29,164 +31,24 @@
     font-style:italic;
     text-align:center;
 }
+iframe.header{
+    width:100%;
+    border:none;
+}
+iframe.footer{
+    width:100%;
+    border:none;
+}
+iframe.body{
+    width:100%;
+    border:none;
+}
 </style>
+<script type="text/javascript" src="setiframeheight.js"></script>
 </head>
 <body>
-<iframe src="header.html"/>
-<!--Put content below here. Special Styling should be added in the header-->
-   <a class="anchor" name="usage"></a><h3>Usage</h3>
-   <p><div class="nav_menu">
-   <li><a href="#usage_models">Scenarios</a></li>
-   <li><a href="#caveats">Caveats (warnings)</a></li>
-   </div></p>
-    <div class="sub-section" style="font-style:italic">Starting the GUI</div>
-     <table id="GUI_img"><tbody><tr><td>
-       <img src="GUI_Linux.png" alt="Image of Linux version of GUI." style="width:95%"/>
-     </td></tr><tr><td>
-       <span class="fig_cap">Linux version of the GUI. On MacOS menus appear in 
-         the normal place rather
-         than in the window.</span></td></tr></tbody></table>
-    <p>If the installation was done properly the GUI can be launched by 
-       navigating to the directory containing this software and issuing the
-       command: <span class="code" style="font-style:monospace">python3 wxParaCrypt.py </span>.
-       If python3 is your system default you can just use "python" instead of
-       "python3". The script "wxParaCrypt.py" also specifies what interpreter to use.
-       Thus, if you set the executable bit in your OS, you should be able to launch
-       the program directly. From the command line in *nix use something like:
-       <span class="code" style="font-style:monospace">./wxParaCrypt.py </span>.
-    </p>
-    <p>It is also possible to create a launcher. This will depend upon which window
-       manager you are using. In the lightweight Linux GUIs look for something like
-       "MenuEditor" or a "Run Program..." option.
-    </p>
-    <div class="sub-section" style="font-style:italic">Choosing a Key File</div>
-    <p>It is important to choose a key file that introduces unpredictable randomness.
-       <span style="font-weight:bold">Avoid </span>file types that have any of the following:
-       <ol>
-         <li>Repetative information (patterns).</li>
-         <li>Large swaths of constant values (uncompressed cartoons or other simple
-             graphics: .tiff, .gif, uncompressed .png).</li>
-         <li>Very simple files such as plain text files.</li>
-       </ol>
-    </p>
-    <p>Ideal files are files with unpredictable randomness that only you and your
-       correspondent have. Some examples are:
-       <ul>
-         <li>Photos with complex backgrounds (preferrably natural) that have not 
-             been posted to the internet/cloud.</li>
-         <li>Document files with a mix of text and images (preferably photos) that
-             use a compressed storage format (e.g. .odt, .docx, .zip, .gzip). Compressed
-             files avoid long runs of constant values.
-         </li>
-       </ul>
-    </p>
-    <p>Because of the way the password is used to randomize the key file, even key
-       files that are not very random should provide reasonable encryption. Still
-       it is best to use key files with as much unpredictability as possible. This
-       software makes no effort to estimate the randomness of your key file. There
-       are some utility functions that can be used to judge this in the codebase,
-       but they are slow and designed to be used in interactive python.
-    </p>
-    <div class="sub-section" style="font-style:italic">Choosing a Password</div>
-    <p>Use the same rules you use for choosing a good account password. It should
-       be at least 8 characters long (12 or more is better). It should contain a
-       mixture of upper and lowercase letters, some numbers and symbols. <span
-       style="font-weight:bold">Avoid </span> just slightly modified words or 
-       phrases that can easily be guessed by someone who does a little research
-       on you or your correspondent.
-    </p>
-    <div class="sub-section" style="font-style:italic">Encrypting a File</div>
-    <ol><li>Select the key file you want to use either by clicking on the button
-       or by typing the full path to the key file in the textbox provided.</li>
-       <li>Select the file to encrypt by clicking on the button or by typing the
-       full path in the textbox provided.</li>
-       <li>Type the password in the textbox provided. The password is not obscured; thus
-       you should not use this software in a location where somebody could read
-       or photograph this over your shoulder. A future version may provide the 
-       option to obscure or show the password.</li>
-       <li>Click on the "Encrypt" button and choose a location and name for the
-       encrypted file.</li>
-       <li>A popup window with status messages will appear. Read the messages to 
-       make sure the encryption worked properly. You then may close this window.
-       </li>
-    </ol>
-    <div class="sub-section" style="font-style:italic">Decrypting a File</div>
-    <ol><li>Select the key file you want to use either by clicking on the button
-       or by typing the full path to the key file in the textbox provided.</li>
-       <li>Select the file to decrypt by clicking on the button or by typing the
-       full path in the textbox provided.</li>
-       <li>Type the password in the textbox provided. The password is not obscured; thus
-       you should not use this software in a location where somebody could read
-       or photograph this over your shoulder. A future version may provide the 
-       option to obscure or show the password.</li>
-       <li>Click on the "Decrypt" button and choose a location to save the 
-       decrypted file. NOTE: The name for the file is stored in the encrypted
-       data. <span style="font-weight:bold">If a file of the same name already
-       exists in the location you choose, it will be overwritten!</span></li>
-       <li>A popup window with status messages will appear. Read the messages to 
-       make sure the decryption worked properly. You then may close this window.
-       </li>
-    </ol>
-  <a class="anchor" name="usage_models"></a><h4>Scenarios</h4>
-   <p>Although I believe this code is secure, it has not undergone any professional
-      security testing. Thus even the "High Security Usage" recommendations may not
-      be secure. In general this should be used as another layer of encryption
-      wrapped inside standard security such as https or PGP encrypted e-mail. I
-      encourage all users to read the code and let me know of issues using the
-      issue tracker on the public archive website.
-   </p>
-   <div class="sub-section" style="font-style:italic">High Security Usage</div>
-   <p>Choose key files that meet the criteria in the section on choosing key files.
-      Use strong passwords that vary in time. Preshare these with your correspondent
-      as well. You should also agree on something to include in the encrypted file
-      that will act as a signature so your correspondent can be sure it came from you.
-      Store the key files on a removable device and do not attach this storage
-      device to a network connected computer. Do all encryption on a computer or
-      device that is not connected to the networks. Transfer only the encrypted
-      file to the network connected computer to send to your correspondent.
-      Decryption should be handled the same way. Do not resuse key file + password
-      combinations.Transfer encrypted files using encrypted network protocols.
-   </p>
-   <div class="sub-section" style="font-style:italic">Medium Security Usage</div>
-   <p>The restrictions for high security usage could be loosened a little. Rather
-      then deciding ahead of time on which key file to use, the name of the key
-      file for the next encrypted document could be transferred using PGP e-mail
-      and a small key file that is reused with the time varying password.
-   </p>
-   <div class="sub-section"  style="font-style:italic">Low Security Usage</div>
-   <p>Rather than using lots of private key files, share a small number of small
-      key files and time varying passwords. Use these and PGP e-mail to agree on
-      publicly available files as the key files. If your web traffic or your
-      correspondent's web traffic is being monitored, decrypting your messages is
-      reduced to guessing your password and combining that with the monitored
-      downloaded files to decrypt your files.
-   </p>
-   <a class="anchor" name="caveats"></a><h4>Caveats (Warnings)</h4>
-    <ul>
-    <li>This code should not be used for archival (long-term) encryption because
-        the encryption depends on
-        the version of the random number generator used by Python. This may change.
-    </li>
-    <li>This code has not undergone a professional security review. Use at your
-        own risk.
-    </li>
-    <li>Version 1.0 has limited error checking. It may crash if you attempt to 
-        decrypt a file with the wrong keyfile or password.
-    </li>
-    <li>If you choose weak passwords or key files that are not adequately random
-        the encryption will not be very good. Any file with large swaths of repeated
-        data will be very bad, because the encryption pattern will be
-        determined only by the predictable psuedo-random number generator. Files
-        with patterns (especially repeating) have similar problems.
-    </li>
-    <li>Reusing password + key file combinations will reduce the security of your
-        encryption, because cryptanalysts may be able to figure out some repeats.
-        That said, if your key files are larger than the files being encrypted you
-        will be somewhat protected by the fact that random chunks of the randomized
-        temporary key file are used each time encryption is done. Which chunk will
-        depend on the cryptographic seed provided by your computer.
-    </li>
-    </ul>
-<iframe src="footer.html"/>
+<iframe class="header" src="header.html"></iframe>
+<iframe class="body" id="body_content" src="usage_body.html" onload="setIframeHeighttoContentHeight(this.id)"></iframe>
+<iframe class="footer" src="footer.html"></iframe>
 </body>
 </html>
