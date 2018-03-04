@@ -1,0 +1,33 @@
+<!DocType HTML5>
+<head>
+<meta charset="utf-8"/>
+<style type="text/css">
+.content{
+    position:relative;
+    text-align:left;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:8px;
+    margin-bottom:10px;
+}
+iframe.header{
+    width:100%;
+    border:none;
+}
+iframe.footer{
+    width:100%;
+    border:none;
+}
+iframe.body{
+    width:100%;
+    border:none;
+}
+</style>
+<script type="text/javascript" src="setiframeheight.js"></script>
+</head>
+<body>
+<iframe class="header" src="header.html"></iframe>
+<iframe class="body" id="body_content" src="Downloads_body.html" onload="setIframeHeighttoContentHeight(this.id)"></content_body>
+<iframe class="footer" src="footer.html"></iframe>
+</body>
+</html>
