@@ -1,0 +1,29 @@
+.logo{
+    margin:2px;
+    display:inline;
+    float:left;
+    width:8em;
+}
+.title{
+    font-weight:bold;
+    font-size:4em;
+    color:orange;
+    text-align:center;
+}
+.subtitle{
+    font-size:1em;
+    text-align:center;
+}
+.header{
+    display:block;
+    margin-top:2px;
+    margin-bottom:30px;
+}
+.nav_menu li{
+    list-style-type:none;
+    border-left:2px grey solid;
+    padding-left:2px;
+    margin-right:1px;
+    position:relative;
+    display:inline-block;
+}

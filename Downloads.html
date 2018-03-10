@@ -1,33 +1,25 @@
 <!DocType HTML5>
 <head>
 <meta charset="utf-8"/>
-<style type="text/css">
-.content{
-    position:relative;
-    text-align:left;
-    margin-left:5px;
-    margin-right:5px;
-    margin-top:8px;
-    margin-bottom:10px;
-}
-iframe.header{
-    width:100%;
-    border:none;
-}
-iframe.footer{
-    width:100%;
-    border:none;
-}
-iframe.body{
-    width:100%;
-    border:none;
-}
-</style>
-<script type="text/javascript" src="setiframeheight.js"></script>
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="content.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<script type="text/javascript" src="domelemfromfile.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+   //load the extra pieces from files.
+   fromfile("header","header.elem");
+   fromfile("footer","footer.elem");
+});
+</script>
 </head>
 <body>
-<iframe class="header" src="header.html"></iframe>
-<iframe class="body" id="body_content" src="Downloads_body.html" onload="setIframeHeighttoContentHeight(this.id)"></content_body>
-<iframe class="footer" src="footer.html"></iframe>
+<div id="header" class="header"></div>
+<div id="content" class="content">
+<!--Put content here. Special styling should be put in content.css-->
+<p>This page will contain links to compressed downloads of ParaCrypt for easy
+  installation.</p>
+</div>
+<div id="footer" class="footer"></div>
 </body>
 </html>

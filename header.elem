@@ -1,43 +1,5 @@
-<!DocType HTML5>
-<html>
-<head>
-<meta charset="utf-8"/>
-<!--This file contains the header for all the site-->
-<style type="text/css" >
-.logo{
-    margin:2px;
-    display:inline;
-    float:left;
-    width:8em;
-}
-.title{
-    font-weight:bold;
-    font-size:4em;
-    color:orange;
-    text-align:center;
-}
-.subtitle{
-    font-size:1em;
-    text-align:center;
-}
-.header{
-    display:block;
-    margin-top:2px;
-    margin-bottom:30px;
-}
-.nav_menu li{
-    list-style-type:none;
-    border-left:2px grey solid;
-    padding-left:2px;
-    margin-right:1px;
-    position:relative;
-    display:inline-block;
-}
-</style>
-</head>
-<body>
-  <div class="header">
-   <div class="logo" id="logo"><img class="logo" src="ParaCryptIcon.svg" alt="ParaCrypt"></div>
+<!--This file contains the header content for the whole site-->
+   <div class="logo" id="logo"><img class="logo" src="ParaCryptIcon.svg" alt="ParaCrypt"></img></div>
    <div class="title" id="title">ParaCrypt</div>
    <div class="subtitle" id="subtitle">more convenient one-time-pad encryption</div>
    <div class="nav_menu" id="nav_menu">
@@ -68,8 +30,4 @@
      <a href="https://github.com/gutow/ParaCrypt/issues" target="_parent">Need more help?</a></li>
      <li title="Submit a Support Request or Bug">
      <a href="https://github.com/gutow/ParaCrypt/issues" target="_parent">Bug Report</a></li>
-     -->
-     </div>
-  </div> 
-</body>
-</html>
+   </div>
