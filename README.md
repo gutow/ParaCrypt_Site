@@ -1,3 +1,3 @@
 This is the backup repository for the ParaCrypt website.
-The main website may be accessed [https://paracrypt.sourceforge.io/]here.
-This copy may be viewed as a website [https://gutow.github.io/ParaCrypt_Site/]here.
+The main website may be accessed at https://paracrypt.sourceforge.io/.
+This copy may be viewed as a website at https://gutow.github.io/ParaCrypt_Site/.
