@@ -1,0 +1,40 @@
+<!DocType HTML5>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="content.css">
+<link rel="stylesheet" type="text/css" href="footer.css">
+<script type="text/javascript" src="domelemfromfile.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+   //load the extra pieces from files.
+   fromfile("header","header.elem");
+   fromfile("footer","footer.elem");
+});
+</script>
+</head>
+<body>
+<div id="header" class="header"></div>
+<div id="content" class="content">
+<!--Put content here. Special styling should be put in content.css-->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="YN4U2FDT5KXU4">
+<table>
+<tr><td><input type="hidden" name="on0" value="Suggest Payments">Suggest Payments</td></tr><tr><td><select name="os0">
+	<option value="Individual">Individual $4.00 USD</option>
+	<option value="Small Business (10 - 50 employees)">Small Business (10 - 50 employees) $40.00 USD</option>
+	<option value="Medium Business (51 - 150 employees)">Medium Business (51 - 150 employees) $180.00 USD</option>
+	<option value="Large Business (200 - 799 employees)">Large Business (200 - 799 employees) $400.00 USD</option>
+	<option value="Very Large Business (800 -1999 employees)">Very Large Business (800 -1999 employees) $1,200.00 USD</option>
+	<option value="Mega Business (>2000 employees)">Mega Business (>2000 employees) $2,500.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+<div id="footer" class="footer"></div>
+</body>
+</html>
