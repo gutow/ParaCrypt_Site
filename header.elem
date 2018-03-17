@@ -2,6 +2,10 @@
    <div class="logo" id="logo"><img class="logo" src="ParaCryptIcon.svg" alt="ParaCrypt"></img></div>
    <div class="title" id="title">ParaCrypt</div>
    <div class="subtitle" id="subtitle">more convenient one-time-pad encryption</div>
+   <button class="tipbutton" onclick="location.href='tiptheprogrammer.html'"
+   title="Support development. Tip the coder(s)">
+   <img src="card_swipe_cartoon.svg"></img>
+   </button>
    <div class="nav_menu" id="nav_menu">
      <li>
      <a href="index.html" target="_parent">Intro</a>
@@ -30,4 +34,7 @@
      <a href="https://github.com/gutow/ParaCrypt/issues" target="_parent">Need more help?</a></li>
      <li title="Submit a Support Request or Bug">
      <a href="https://github.com/gutow/ParaCrypt/issues" target="_parent">Bug Report</a></li>
+     -->
+     <!--<li title="Support development. Tip the coder(s)">
+     <a href="tiptheprogrammer.html">Tip the coder(s)</a></li>-->
    </div>
