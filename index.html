@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <p>This software originally started as a project to better
       understand the weaknesses in the cryptography that privacy on the internet
       depends upon. Reading a little literature, poking through the cryptography
-      standards documents and some cryptographic code convinced me that although
-      most of the standard methods are reasonably secure at the moment, they are
+      standards documents and some cryptographic code convinced me that
+      most of the standard methods are reasonably secure at the moment. However,
+      they are
       all vulnerable to increases in computing power and smart cryptanalysts. The
       only provably uncrackable encryption is a 
       <a href="https://en.wikipedia.org/wiki/One-time_pad">
@@ -32,22 +33,28 @@ document.addEventListener('DOMContentLoaded', function() {
       because they require presharing a well randomized agreed upon key that is 
       longer than what is to be encrypted. 
     </p>
-    <p>Paranoid Encrypt is my attempt to make this as convenient
+    <p>Paranoid Encryption is my attempt to make this as convenient
        as possible. You still must preshare key files with your correspondent, but
        the files themselves do not have to be completely random. Your key files can
        be photos, large documents with a mixture of text and images or any other
-       computer file you have handy (see the section on picking key files, 
+       computer file you have handy (see more on picking key files in the
+       <a href="usage.html">usage section</a>, because
        it is possible to choose bad key files). To make this work you must also 
        share with your
        correspondent a password (even better, time varying passwords). The key file
        and the password are combined to make a one-time-pad with good randomness.
        As long as the password + key file combination is not reused or compromised
-       the encrypted data should be undecipherable. That said, a good cryptanalyst
-       with some idea of what is in your message may be able to extract some of it.
+       the encrypted data should be undecipherable.
     </p>
-    <p>The code repository is under construction, but may be accessed 
-     <a href="https://sourceforge.net/projects/paracrypt/">here</a>.</p>
-    <p>This site is currently under construction please check back.</p>
+    <p>If you find this software useful or interesting please consider 
+    <a href="tiptheprogrammer.html"> supporting further development
+    <img src="card_swipe_cartoon.svg" style="height:1.5em;"></img></a> 
+    by tipping the coder(s). Also please let
+    me know how you use ParaCrypt and what you think about it by briefly contributing
+    to the <a href="https://sourceforge.net/p/paracrypt/paracrypt-users-disc/">
+    general discussion list</a>, <a href="https://sourceforge.net/p/paracrypt/tickets-bugs/">
+    reporting bugs</a> and contributing 
+    <a href="https://sourceforge.net/p/paracrypt/enhancements/">feature requests</a>.</p>
 </div>
 <div id="footer" class="footer"></div>
 </body>
